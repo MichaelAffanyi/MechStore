@@ -1,0 +1,63 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbbcc4;
+    font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    overflow: hidden;
+}
+
+form {
+    width: 50%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2 span {
+    color: #485fc7;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input {
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid #b7b9bb;
+    border-radius: 5px;
+    box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+    max-width: 100%;
+    width: 100%;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+input:active {
+    outline: none;
+}
+
+button {
+    background: #485fc7;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}

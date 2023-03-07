@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mech store sign in</title>
+    <link th:href = "@{/css/signup.css}" rel="stylesheet">
+</head>
+<body>
+    <form action="#" th:action="@{/dashboard}" th:method="post">
+        <h2>Sign in to <span>Mech Store</span></h2>
+        <div>
+            <label class="label">Username</label>
+            <div>
+                <input class="input" type="text" placeholder="e.g. mikeBray" required>
+            </div>
+        </div>
+        <div>
+            <label>Password</label>
+            <div>
+                <input type="password" placeholder="e.g. Bray" required>
+            </div>
+        </div>
+        <button class="button is-primary is-link">Sign in</button>
+    </form>
+</body>
+</html>

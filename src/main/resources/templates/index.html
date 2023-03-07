@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mech Store signup</title>
+    <link th:href = "@{/css/signup.css}" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+</head>
+<body>
+<form class="container is-max-desktop box" th:action="@{/login}" th:method="post" th:object="${userForm}">
+    <h2 class="title is-2">Welcome to <span>Mech Store</span></h2>
+    <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="e.g. Mike" th:field="*{firstname}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Last name</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="e.g. Bray" th:field="*{lastname}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="e.g. mikeBray" th:field="*{username}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="e.g. mikeBray@gmail.com" th:field="*{email}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+            <input class="input" type="password" placeholder="********" th:field="*{password}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Confirm password</label>
+        <div class="control">
+            <input class="input" type="password" placeholder="********" required>
+        </div>
+    </div>
+    <button class="button is-primary is-link">Sign up</button>
+</form>
+</body>
+</html>

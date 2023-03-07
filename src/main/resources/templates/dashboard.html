@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img th:src="@{/images/logoWhite.png}"></div>
+        <div class="search">
+            <div class="icon">
+                <img th:src="@{/images/search.png}">
+            </div>
+        </div>
+        <div class="menu">
+            <span>Home</span>
+            <span>about us</span>
+            <span>contact us</span>
+            <button>logout</button>
+        </div>
+    </nav>
+    <div class="header">
+        <img th:src="@{/images/bg.jpg}">
+        <span>Welcome to the <b>biggest</b> <br />online mechanical shop</span>
+        <button class="home">Purchase item</button>
+    </div>
+    <div class="body">
+        <div class="card">
+<!--            <img th:src="">-->
+            <div class="bottom">
+                <span class="name">Skrew driver</span>
+                <span>$4</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
