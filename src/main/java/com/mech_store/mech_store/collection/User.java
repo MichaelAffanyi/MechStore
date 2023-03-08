@@ -2,7 +2,6 @@ package com.mech_store.mech_store.collection;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -13,21 +12,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     private String id;
-    @NotBlank
-    @Size(min = 3)
+    @NotBlank(message = "First name can't be empty")
+    @Size(min = 3, message = "Length should be more than three characters")
     private String firstname;
-    @NotBlank
-    @Size(min = 3)
+    @NotBlank(message = "Last name can't be empty")
+    @Size(min = 3, message = "Length should be more than three characters")
     private String lastname;
 
-    @Email
-    @Size(min = 8)
+    @Email(message = "Email can't be empty")
+    @Size(min = 8, message = "Length should be more than eight characters")
     private String email;
-    @NotBlank
-    @Size(min = 5)
+    @NotBlank(message = "Username can't be empty")
+    @Size(min = 5, message = "Length should be more than five characters")
     private String username;
-    @NotBlank
-    @Size(min = 8)
+    @NotBlank(message = "Password can't be empty")
+    @Size(min = 8, message = "Length should be more than eight characters")
     private String password;
 
     public User(String firstname, String lastname, String dob, String username, String password) {
