@@ -27,34 +27,20 @@
     <div class="body">
         <div class="topic">
             <span class="title">Our Product</span>
-            <span class="description">MechStore is definitely your best choice for quality replacement parts and automotive components. As the first leading auto parts dealer in Ghana, we supply only the premium quality auto spare parts for Proton, Perodua, Honda, Nissan, Toyota, Mitsubishi, Ford, Mazda, Suzuki, Subaru, Isuzu, Chevrolet, Hyundai And Kia. In addition, we also specialize in all the major car parts, ranging from timing belts, steering and suspension systems, drive shafts as well as brake pads. Whether you are looking for the best quality car parts and accessories to upgrade your ride performance or searching fo compatible replacement parts for your repair projects, rest assured that you won’t be running out of options with our comprehensive product catalog of auto parts. If you need any further information, feel free to contact us and our dedicated team are always on hand with expert advice and assistance.</span>
+            <span class="subtitle">MechStore is definitely your best choice for quality replacement parts and automotive components. As the first leading auto parts dealer in Ghana, we supply only the premium quality auto spare parts for Proton, Perodua, Honda, Nissan, Toyota, Mitsubishi, Ford, Mazda, Suzuki, Subaru, Isuzu, Chevrolet, Hyundai And Kia. In addition, we also specialize in all the major car parts, ranging from timing belts, steering and suspension systems, drive shafts as well as brake pads. Whether you are looking for the best quality car parts and accessories to upgrade your ride performance or searching fo compatible replacement parts for your repair projects, rest assured that you won’t be running out of options with our comprehensive product catalog of auto parts. If you need any further information, feel free to contact us and our dedicated team are always on hand with expert advice and assistance.</span>
         </div>
         <div class="grid-container">
-            <div class="card">
+            <div th:each="product: ${products}" class="card">
                 <div class="image">
-                    <img th:src="@{/images/shock-absorber.jpg}" />
+                    <img th:src="@{${'/images/' + product.image}}" />
                 </div>
                 <div class="bottom">
-                    <span class="name">Skew driver</span>
-                    <span>$4</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-
-                </div>
-                <div class="bottom">
-                    <span class="name">Skew driver</span>
-                    <span>$4</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-
-                </div>
-                <div class="bottom">
-                    <span class="name">Skew driver</span>
-                    <span>$4</span>
+                    <span th:text="${product.name}" class="name"></span>
+                    <span th:text="${product.description}" class="description"></span>
+                    <div class="grid-button">
+                        <button>Purchase</button>
+                        <span class="price" th:text="${'$' + product.price}"></span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,12 +1,15 @@
 package com.mech_store.mech_store.controller;
 
+import com.mech_store.mech_store.collection.Products;
 import com.mech_store.mech_store.collection.User;
+import com.mech_store.mech_store.repository.ProductRepository;
 import com.mech_store.mech_store.repository.UserRepository;
 import com.mech_store.mech_store.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,6 +23,8 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private ProductRepository productRepository;
 
     private UserService userService;
 
@@ -35,25 +40,24 @@ public class UserController {
 //    }
 
     @GetMapping ("/dashboard")
-    public String dashboard() {
+    public String dashboard(Model model) {
+        List<Products> products = productRepository.findAll();
+        model.addAttribute("products", products);
         return "dashboard";
     }
 
     @PostMapping("/login")
-    public String addUser(@Valid @ModelAttribute User user, Model model, Errors errors) {
+    public String addUser(@Valid @ModelAttribute User user, Errors errors, Model model) {
         if(errors.hasErrors()) {
+            model.addAttribute("userForm", new User());
             return "index";
         }
         else {
-            model.addAttribute("userForm", new User());
+//            model.addAttribute("userForm", new User());
             userRepository.save(user);
             return "login";
         }
 
-//        if(bindingResult.hasErrors()) {
-//            return "index";
-//        }
-//        return userRepository.save(user);
     }
 
     @GetMapping("/getusername")

@@ -8,8 +8,8 @@
 <body>
     <form action="#" th:action="@{/dashboard}" th:method="post" th:object="${loginForm}">
         <h2>Sign in to <span>Mech Store</span></h2>
-        <input class="input" type="text" placeholder="Username" th:field="*{username}" required>
-        <input class="input" type="password" placeholder="Password" th:field="*{password}" required>
+        <input class="input" type="text" placeholder="Username" required>
+        <input class="input" type="password" placeholder="Password" required>
         <button class="button is-primary is-link">Sign in</button>
     </form>
 </body>

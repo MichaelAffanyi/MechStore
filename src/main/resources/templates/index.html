@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <title>Mech Store signup</title>
     <link th:href = "@{/css/signup.css}" rel="stylesheet">
-<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
 </head>
 <body>
-    <form class="container is-max-desktop box" th:action="@{/login}" th:method="post" th:object="${userForm}">
+    <form th:action="@{/login}" th:method="POST" th:object="${userForm}">
         <h2 class="title is-2">Welcome to <span>Mech Store</span></h2>
         <input class="input" type="text" placeholder="First Name" th:field="*{firstname}">
         <p th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></p>

@@ -3,12 +3,16 @@ package com.mech_store.mech_store.collection;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Users")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     private String id;
@@ -29,15 +33,12 @@ public class User {
     @Size(min = 8, message = "Length should be more than eight characters")
     private String password;
 
-    public User(String firstname, String lastname, String dob, String username, String password) {
+    public User(String firstname, String lastname, String email, String username, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
+        this.email = email;
         this.username = username;
         this.password = password;
-        this.email = email;
     }
 
-    public User() {
-
-    }
 }
