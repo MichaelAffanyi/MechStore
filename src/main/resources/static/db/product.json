@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Brake System",
+        "image": "brake-system.jpg",
+        "description": "MechStore’s brake pad sets have also been designed to provide superior stopping power and reliability in all driving conditions. Rest assured that our products are higly engineered in order to ensure they meet or exceed OE standards for performance, durability and feel.",
+        "price": "20"
+    },
+    {
+        "name": "Drive Shafts",
+        "image": "drive-shafts.jpg",
+        "description": "At MechStore, our drive shafts are designed to meet strict tolerances as specified in OEM specifications. In addition, a series of assembly, quality control and testing have also been carried out to ensure efficient and long-lasting power transmission. Hence, you can feel confident when buying the parts you need from MechStore.",
+        "price": "45"
+    },
+    {
+        "name": "Shock Absorber",
+        "image": "shock-absorber.jpg",
+        "description": "At MechStore, our shock absorbers are designed to meet strict tolerances as specified in OEM specifications. In addition, a series of assembly, quality control and testing have also been carried out to ensure efficient and long-lasting power transmission. Hence, you can feel confident when buying the parts you need from MechStore.",
+        "price": "23"
+    },
+    {
+        "name": "Steering System Parts",
+        "image": "steering-system-parts.jpg",
+        "description": "Steering system is usually be known as the most important part of a vehicle as it enables a driver to control and continuously adjust the steered path of the vehicle by rotating the steering wheel. For more than a decade of experience in the automotive industry, MechStore is proud to be known as one of the Ghana’s top steering system and ball joint suppliers that distributes a premium line of steering system parts like tie rod end, rack end, ball joint, as well as stabilizer link. At MechStore, all of our replacement parts are designed to meet OEM-specific requirements and are able to achieve excellent handling that makes the driver feels safe and in control.",
+        "price": "19"
+    },
+    {
+        "name": "Suspension Parts",
+        "image": "suspension-parts.jpg",
+        "description": "Fully tested with corrosion resistance and are in accord with OE standards, MechStore’s suspension parts are formulated with only one goal: to support a super-smooth ride even in the harshest driving conditions. While, all our auto parts are also made available for all the brands of vehicle in Ghana.",
+        "price": "32"
+    },
+    {
+        "name": "Timing Component Kit",
+        "image": "timing-component-kit.jpg",
+        "description": "Today, highly sophisticated car engines are operating at higher speeds, higher temperatures and producing more power which required highly engineered materials to meet high mileage replacement intervals. Hence, your timing belt would be an essential component that must be replaced in a timely manner in order to ensure proper engine operation.",
+        "price": "50"
+    },
+    {
+        "name": "Wheel Hub And Bearings",
+        "image": "wheel-hub-and-bearings.jpg",
+        "description": "Whether you're planning a skiing excursion or off-roading trip, it's essential that your vehicle's hub assembly is in peak operating condition. A properly working wheel hub assembly (WHA) prevents you from feeling wheel wobbling and vibrations, ensuring a safer and smoother ride. Avoid unwanted growling, rumbling or humming noises when you're turning a corner or rubble-roaming by investing in a high-quality wheel bearing and hub assembly from MechStore.",
+        "price": "27"
+    }
+]
