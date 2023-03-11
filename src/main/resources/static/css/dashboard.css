@@ -215,3 +215,8 @@ button {
     font-weight: bold;
     color: #FE1518;
 }
+
+.modal-text {
+    color: black;
+    font-weight: bold;
+}
